@@ -12,11 +12,11 @@ A simple console-based inventory management application built in C#. Users can a
 ## How It Works
 
 The application runs in a loop, displaying a numbered menu until the user chooses to exit:
-1.Add a product
-2.Update stock
-3.View products
-4.Remove a product
-5.Exit
+--1.Add a product
+--2.Update stock
+--3.View products
+--4.Remove a product
+--5.Exit
 All product data is stored in memory using a `List<Product>` for the duration of the session (no persistence to disk).
 
 ## Project Structure
