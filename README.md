@@ -12,22 +12,24 @@ A simple console-based inventory management application built in C#. Users can a
 ## How It Works
 
 The application runs in a loop, displaying a numbered menu until the user chooses to exit:
--1.Add a product
--2.Update stock
--3.View products
--4.Remove a product
--5.Exit
-All product data is stored in memory using a `List<Product>` for the duration of the session (no persistence to disk).
+
+1. Add a product
+2. Update stock
+3. View products
+4. Remove a product
+5. Exit
+
+All product data is stored in memory using a List<Product> for the duration of the session (no persistence to disk).
 
 ## Project Structure
 
-- `Product` — a class representing a single inventory item (name, price, quantity), with both a parameterized and a default constructor.
-- `FindProduct` — a shared helper method used across Add, Update, and Remove operations to locate a product by name, returning its index in the list (or `-1` if not found).
-- `AddProduct`, `UpdateStock`, `DisplayInventory`, `RemoveProduct` — the four core operations, each validating input before modifying the inventory.
+- Product — a class representing a single inventory item (name, price, quantity), with both a parameterized and a default constructor.
+- FindProduct — a shared helper method used across Add, Update, and Remove operations to locate a product by name, returning its index in the list (or -1 if not found).
+- AddProduct, UpdateStock, DisplayInventory, RemoveProduct — the four core operations, each validating input before modifying the inventory.
 
 ## Known Limitations
 
-- Numeric input is read using `int.Parse` / `double.Parse`, so entering non-numeric text at a prompt will cause the program to throw an exception and exit rather than showing a friendly error. Switching these to `TryParse` is a planned improvement.
+- Numeric input is read using int.Parse / double.Parse, so entering non-numeric text at a prompt will cause the program to throw an exception and exit rather than showing a friendly error. Switching these to TryParse is a planned improvement.
 - Data does not persist between runs — the inventory resets each time the program starts.
 
 ## Requirements
@@ -36,6 +38,4 @@ All product data is stored in memory using a `List<Product>` for the duration of
 
 ## Running It
 
-```bash
-dotnet run
-```
+    dotnet run
